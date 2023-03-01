@@ -1,16 +1,16 @@
+import { statistics, user } from 'data';
+import { GlobalStyle } from './GlobalStyle/GlobalStyle';
+import { Layout } from './Layout/Layout';
+
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <GlobalStyle />
+      <Profile user={user} />
+      <Statistics title="Upload stats" stats={statistics} />
+    </Layout>
   );
 };
